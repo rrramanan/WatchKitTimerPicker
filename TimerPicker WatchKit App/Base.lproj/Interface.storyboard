@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14313.18" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14238.10"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TimerPicker_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="0.65000000000000002" alignment="left" id="aH4-Au-e1B">
+                            <items>
+                                <picker width="0.5" height="1" alignment="left" focusStyle="sequence" id="YyG-mr-bbo">
+                                    <connections>
+                                        <action selector="hour:" destination="AgC-eL-Hgc" id="Zk8-lc-TDo"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.5" height="1" alignment="left" focusStyle="sequence" id="Qzh-MW-1zD">
+                                    <connections>
+                                        <action selector="min:" destination="AgC-eL-Hgc" id="GQB-rd-ujZ"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <group width="1" height="0.14999999999999999" alignment="center" id="CIo-p5-qDP">
+                            <items>
+                                <label width="0.40000000000000002" height="1" alignment="left" text="HH" textAlignment="center" id="PVl-EN-q3M">
+                                    <color key="textColor" red="0.1137254902" green="0.56078431370000004" blue="0.4759140114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </label>
+                                <separator height="1" alignment="center" id="qPY-Id-MRZ">
+                                    <color key="color" red="0.15686274510000001" green="0.84313725490000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </separator>
+                                <label width="0.40000000000000002" height="1" alignment="right" text="MM" textAlignment="center" id="cHJ-au-afK">
+                                    <color key="textColor" red="0.1137254902" green="0.56078431370000004" blue="0.4759140114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </label>
+                            </items>
+                        </group>
+                        <button width="1" height="0.20000000000000001" alignment="center" title="HH:MM" id="glv-Xv-feK">
+                            <color key="titleColor" red="0.15686274510000001" green="0.84313725490000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="15"/>
+                            <connections>
+                                <action selector="timerAction" destination="AgC-eL-Hgc" id="7KO-99-Cgf"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="hourLabel" destination="PVl-EN-q3M" id="KrA-Si-uOW"/>
+                        <outlet property="hourPicker" destination="YyG-mr-bbo" id="Iuo-CF-nz0"/>
+                        <outlet property="minLabel" destination="cHJ-au-afK" id="ERb-is-xVe"/>
+                        <outlet property="minPicker" destination="Qzh-MW-1zD" id="ZDt-l1-dxD"/>
+                        <outlet property="timerButton" destination="glv-Xv-feK" id="OOu-km-1Mq"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="28" y="97"/>
+        </scene>
+    </scenes>
+</document>
